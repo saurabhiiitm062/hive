@@ -90,6 +90,7 @@ class TestHealthCheckerRegistry:
             "pipedrive",
             "resend",
             "serpapi",
+            "similarweb",
             "slack",
             "stripe",
             "telegram",

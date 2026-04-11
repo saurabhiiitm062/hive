@@ -1083,6 +1083,23 @@ class SerpApiHealthChecker(BaseHttpHealthChecker):
     AUTH_TYPE = BaseHttpHealthChecker.AUTH_QUERY
     AUTH_QUERY_PARAM_NAME = "api_key"
 
+class SimilarWebHealthChecker(BaseHttpHealthChecker):
+    """Health checker for SimilarWeb API key."""
+
+    ENDPOINT = "https://api.similarweb.com/v1/website/google.com/total-traffic-and-engagement/visits"
+    SERVICE_NAME = "SimilarWeb"
+    AUTH_TYPE = BaseHttpHealthChecker.AUTH_QUERY
+    AUTH_QUERY_PARAM_NAME = "api"
+
+    def _build_params(self, credential_value: str) -> dict[str, str]:
+        params = super()._build_params(credential_value)
+        params.update({
+            "start_date": "2024-01",
+            "end_date": "2024-01",
+            "country": "world",
+            "granularity": "monthly"
+        })
+        return params
 
 class ApolloHealthChecker(BaseHttpHealthChecker):
     """Health checker for Apollo.io API key."""
@@ -1344,6 +1361,7 @@ HEALTH_CHECKERS: dict[str, CredentialHealthChecker] = {
     "pipedrive": PipedriveHealthChecker(),
     "resend": ResendHealthChecker(),
     "serpapi": SerpApiHealthChecker(),
+    "similarweb": SimilarWebHealthChecker(),
     "slack": SlackHealthChecker(),
     "stripe": StripeHealthChecker(),
     "telegram": TelegramHealthChecker(),
