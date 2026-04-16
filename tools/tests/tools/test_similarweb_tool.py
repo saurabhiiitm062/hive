@@ -1,5 +1,7 @@
 """Tests for similarweb_tool - Website traffic and competitor analytics."""
 
+from __future__ import annotations
+
 from unittest.mock import MagicMock, patch
 
 import httpx
@@ -10,19 +12,19 @@ from aden_tools.tools.similarweb_tool.similarweb_tool import register_tools
 
 
 class MockCredentials:
-    def get(self, key):
+    def get(self, key: str) -> str | None:
         if key in ("similarweb", "similarweb_api_key"):
             return "test_api_key_123"
         return None
 
 
 @pytest.fixture
-def credentials():
+def credentials() -> MockCredentials:
     return MockCredentials()
 
 
 @pytest.fixture
-def mcp_with_tools(mcp: FastMCP, credentials):
+def mcp_with_tools(mcp: FastMCP, credentials: MockCredentials) -> FastMCP:
     register_tools(mcp, credentials=credentials)
     return mcp
 
