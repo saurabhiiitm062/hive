@@ -1087,9 +1087,7 @@ class SerpApiHealthChecker(BaseHttpHealthChecker):
 class SimilarWebHealthChecker(BaseHttpHealthChecker):
     """Health checker for SimilarWeb API key."""
 
-    ENDPOINT = (
-        "https://api.similarweb.com/v1/website/google.com/total-traffic-and-engagement/visits"
-    )
+    ENDPOINT = "https://api.similarweb.com/v1/website/google.com/total-traffic-and-engagement/visits"
     SERVICE_NAME = "SimilarWeb"
     AUTH_TYPE = BaseHttpHealthChecker.AUTH_HEADER
     AUTH_HEADER_NAME = "api-key"

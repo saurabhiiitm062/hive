@@ -574,17 +574,13 @@ class TestSimilarWebTool:
         assert mock_get.call_args[1]["params"].get("format") == "json"
 
     @patch("aden_tools.tools.similarweb_tool.similarweb_tool.httpx.get")
-    def test_similarweb_get_desktop_pages_per_visit_by_channel_success(
-        self, mock_get, mcp_with_tools
-    ):
+    def test_similarweb_get_desktop_pages_per_visit_by_channel_success(self, mock_get, mcp_with_tools):
         mock_response = MagicMock()
         mock_response.json.return_value = {"data": "success"}
         mock_response.raise_for_status.return_value = None
         mock_get.return_value = mock_response
 
-        tool = mcp_with_tools._tool_manager._tools[
-            "similarweb_get_desktop_pages_per_visit_by_channel"
-        ]
+        tool = mcp_with_tools._tool_manager._tools["similarweb_get_desktop_pages_per_visit_by_channel"]
         _ = tool.fn(domain="example_value")
 
         mock_get.assert_called_once()
@@ -592,17 +588,13 @@ class TestSimilarWebTool:
         assert mock_get.call_args[1]["params"].get("format") == "json"
 
     @patch("aden_tools.tools.similarweb_tool.similarweb_tool.httpx.get")
-    def test_similarweb_get_desktop_average_visit_duration_by_channel_success(
-        self, mock_get, mcp_with_tools
-    ):
+    def test_similarweb_get_desktop_average_visit_duration_by_channel_success(self, mock_get, mcp_with_tools):
         mock_response = MagicMock()
         mock_response.json.return_value = {"data": "success"}
         mock_response.raise_for_status.return_value = None
         mock_get.return_value = mock_response
 
-        tool = mcp_with_tools._tool_manager._tools[
-            "similarweb_get_desktop_average_visit_duration_by_channel"
-        ]
+        tool = mcp_with_tools._tool_manager._tools["similarweb_get_desktop_average_visit_duration_by_channel"]
         _ = tool.fn(domain="example_value")
 
         mock_get.assert_called_once()
@@ -680,17 +672,13 @@ class TestSimilarWebTool:
         assert mock_get.call_args[1]["params"].get("format") == "json"
 
     @patch("aden_tools.tools.similarweb_tool.similarweb_tool.httpx.get")
-    def test_similarweb_get_desktop_publishers_per_ad_network_success(
-        self, mock_get, mcp_with_tools
-    ):
+    def test_similarweb_get_desktop_publishers_per_ad_network_success(self, mock_get, mcp_with_tools):
         mock_response = MagicMock()
         mock_response.json.return_value = {"data": "success"}
         mock_response.raise_for_status.return_value = None
         mock_get.return_value = mock_response
 
-        tool = mcp_with_tools._tool_manager._tools[
-            "similarweb_get_desktop_publishers_per_ad_network"
-        ]
+        tool = mcp_with_tools._tool_manager._tools["similarweb_get_desktop_publishers_per_ad_network"]
         _ = tool.fn(domain="example_value")
 
         mock_get.assert_called_once()
@@ -698,17 +686,13 @@ class TestSimilarWebTool:
         assert mock_get.call_args[1]["params"].get("format") == "json"
 
     @patch("aden_tools.tools.similarweb_tool.similarweb_tool.httpx.get")
-    def test_similarweb_get_desktop_organic_keyword_competitors_success(
-        self, mock_get, mcp_with_tools
-    ):
+    def test_similarweb_get_desktop_organic_keyword_competitors_success(self, mock_get, mcp_with_tools):
         mock_response = MagicMock()
         mock_response.json.return_value = {"data": "success"}
         mock_response.raise_for_status.return_value = None
         mock_get.return_value = mock_response
 
-        tool = mcp_with_tools._tool_manager._tools[
-            "similarweb_get_desktop_organic_keyword_competitors"
-        ]
+        tool = mcp_with_tools._tool_manager._tools["similarweb_get_desktop_organic_keyword_competitors"]
         _ = tool.fn(domain="example_value")
 
         mock_get.assert_called_once()
@@ -716,17 +700,13 @@ class TestSimilarWebTool:
         assert mock_get.call_args[1]["params"].get("format") == "json"
 
     @patch("aden_tools.tools.similarweb_tool.similarweb_tool.httpx.get")
-    def test_similarweb_get_desktop_paid_keyword_competitors_success(
-        self, mock_get, mcp_with_tools
-    ):
+    def test_similarweb_get_desktop_paid_keyword_competitors_success(self, mock_get, mcp_with_tools):
         mock_response = MagicMock()
         mock_response.json.return_value = {"data": "success"}
         mock_response.raise_for_status.return_value = None
         mock_get.return_value = mock_response
 
-        tool = mcp_with_tools._tool_manager._tools[
-            "similarweb_get_desktop_paid_keyword_competitors"
-        ]
+        tool = mcp_with_tools._tool_manager._tools["similarweb_get_desktop_paid_keyword_competitors"]
         _ = tool.fn(domain="example_value")
 
         mock_get.assert_called_once()
@@ -762,17 +742,13 @@ class TestSimilarWebTool:
         assert mock_get.call_args[1]["params"].get("format") == "json"
 
     @patch("aden_tools.tools.similarweb_tool.similarweb_tool.httpx.get")
-    def test_similarweb_get_desktop_outgoing_ads_advertisers_success(
-        self, mock_get, mcp_with_tools
-    ):
+    def test_similarweb_get_desktop_outgoing_ads_advertisers_success(self, mock_get, mcp_with_tools):
         mock_response = MagicMock()
         mock_response.json.return_value = {"data": "success"}
         mock_response.raise_for_status.return_value = None
         mock_get.return_value = mock_response
 
-        tool = mcp_with_tools._tool_manager._tools[
-            "similarweb_get_desktop_outgoing_ads_advertisers"
-        ]
+        tool = mcp_with_tools._tool_manager._tools["similarweb_get_desktop_outgoing_ads_advertisers"]
         _ = tool.fn(domain="example_value")
 
         mock_get.assert_called_once()
@@ -780,17 +756,13 @@ class TestSimilarWebTool:
         assert mock_get.call_args[1]["params"].get("format") == "json"
 
     @patch("aden_tools.tools.similarweb_tool.similarweb_tool.httpx.get")
-    def test_similarweb_get_desktop_traffic_sources_by_channel_success(
-        self, mock_get, mcp_with_tools
-    ):
+    def test_similarweb_get_desktop_traffic_sources_by_channel_success(self, mock_get, mcp_with_tools):
         mock_response = MagicMock()
         mock_response.json.return_value = {"data": "success"}
         mock_response.raise_for_status.return_value = None
         mock_get.return_value = mock_response
 
-        tool = mcp_with_tools._tool_manager._tools[
-            "similarweb_get_desktop_traffic_sources_by_channel"
-        ]
+        tool = mcp_with_tools._tool_manager._tools["similarweb_get_desktop_traffic_sources_by_channel"]
         _ = tool.fn(domain="example_value")
 
         mock_get.assert_called_once()
@@ -812,17 +784,13 @@ class TestSimilarWebTool:
         assert mock_get.call_args[1]["params"].get("format") == "json"
 
     @patch("aden_tools.tools.similarweb_tool.similarweb_tool.httpx.get")
-    def test_similarweb_get_mobile_traffic_sources_by_channel_success(
-        self, mock_get, mcp_with_tools
-    ):
+    def test_similarweb_get_mobile_traffic_sources_by_channel_success(self, mock_get, mcp_with_tools):
         mock_response = MagicMock()
         mock_response.json.return_value = {"data": "success"}
         mock_response.raise_for_status.return_value = None
         mock_get.return_value = mock_response
 
-        tool = mcp_with_tools._tool_manager._tools[
-            "similarweb_get_mobile_traffic_sources_by_channel"
-        ]
+        tool = mcp_with_tools._tool_manager._tools["similarweb_get_mobile_traffic_sources_by_channel"]
         _ = tool.fn(domain="example_value")
 
         mock_get.assert_called_once()
@@ -858,17 +826,13 @@ class TestSimilarWebTool:
         assert mock_get.call_args[1]["params"].get("format") == "json"
 
     @patch("aden_tools.tools.similarweb_tool.similarweb_tool.httpx.get")
-    def test_similarweb_get_mobile_organic_keyword_competitors_success(
-        self, mock_get, mcp_with_tools
-    ):
+    def test_similarweb_get_mobile_organic_keyword_competitors_success(self, mock_get, mcp_with_tools):
         mock_response = MagicMock()
         mock_response.json.return_value = {"data": "success"}
         mock_response.raise_for_status.return_value = None
         mock_get.return_value = mock_response
 
-        tool = mcp_with_tools._tool_manager._tools[
-            "similarweb_get_mobile_organic_keyword_competitors"
-        ]
+        tool = mcp_with_tools._tool_manager._tools["similarweb_get_mobile_organic_keyword_competitors"]
         _ = tool.fn(domain="example_value")
 
         mock_get.assert_called_once()
@@ -1128,17 +1092,13 @@ class TestSimilarWebTool:
         assert mock_get.call_args[1]["params"].get("format") == "json"
 
     @patch("aden_tools.tools.similarweb_tool.similarweb_tool.httpx.get")
-    def test_similarweb_get_segment_marketing_channels_desktop_success(
-        self, mock_get, mcp_with_tools
-    ):
+    def test_similarweb_get_segment_marketing_channels_desktop_success(self, mock_get, mcp_with_tools):
         mock_response = MagicMock()
         mock_response.json.return_value = {"data": "success"}
         mock_response.raise_for_status.return_value = None
         mock_get.return_value = mock_response
 
-        tool = mcp_with_tools._tool_manager._tools[
-            "similarweb_get_segment_marketing_channels_desktop"
-        ]
+        tool = mcp_with_tools._tool_manager._tools["similarweb_get_segment_marketing_channels_desktop"]
         _ = tool.fn()
 
         mock_get.assert_called_once()
@@ -1544,9 +1504,7 @@ class TestSimilarWebTool:
         mock_response.text = "Not Found"
 
         # Have httpx.get raise HTTPStatusError
-        mock_get.side_effect = httpx.HTTPStatusError(
-            "404 Not Found", request=MagicMock(), response=mock_response
-        )
+        mock_get.side_effect = httpx.HTTPStatusError("404 Not Found", request=MagicMock(), response=mock_response)
 
         for name, tool in mcp_with_tools._tool_manager._tools.items():
             if not name.startswith("similarweb_get_"):
@@ -1573,9 +1531,7 @@ class TestSimilarWebTool:
 
             # Assert that the error is gracefully caught and returned
             assert "error" in result, f"Tool {name} did not return 'error' key"
-            assert "HTTP error 404" in result["error"], (
-                f"Tool {name} had wrong error message: {result['error']}"
-            )
+            assert "HTTP error 404" in result["error"], f"Tool {name} had wrong error message: {result['error']}"
 
     @patch("aden_tools.tools.similarweb_tool.similarweb_tool.httpx.get")
     def test_all_api_network_error_handling(self, mock_get, mcp_with_tools):

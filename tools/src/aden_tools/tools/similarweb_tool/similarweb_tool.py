@@ -668,9 +668,7 @@ def register_tools(mcp: FastMCP, credentials: CredentialStoreAdapter | None = No
         return _make_request(endpoint, api_key_res, params)
 
     @mcp.tool()
-    def similarweb_get_app_ranking(
-        app_id: str, store: str = "google", country: str = "us"
-    ) -> dict[str, Any]:
+    def similarweb_get_app_ranking(app_id: str, store: str = "google", country: str = "us") -> dict[str, Any]:
         """
         Gets App Store/Google Play rankings.
         """
@@ -684,9 +682,7 @@ def register_tools(mcp: FastMCP, credentials: CredentialStoreAdapter | None = No
         return _make_request(endpoint, api_key_res, params)
 
     @mcp.tool()
-    def similarweb_get_app_engagement(
-        app_id: str, store: str = "google", country: str = "us"
-    ) -> dict[str, Any]:
+    def similarweb_get_app_engagement(app_id: str, store: str = "google", country: str = "us") -> dict[str, Any]:
         """
         Fetches DAU, MAU, and retention metrics.
         """
