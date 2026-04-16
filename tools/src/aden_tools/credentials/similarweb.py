@@ -24,7 +24,6 @@ SIMILARWEB_CREDENTIALS = {
             "similarweb_get_app_overview",
             "similarweb_get_audience_interests",
             "similarweb_get_top_outgoing_links",
-            "similarweb_get_device_split",
             "similarweb_get_category_leaders",
             "similarweb_get_technologies",
             "similarweb_get_social_media_traffic",
